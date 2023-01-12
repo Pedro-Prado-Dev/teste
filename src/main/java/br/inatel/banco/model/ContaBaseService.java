@@ -39,12 +39,18 @@ public abstract class ContaBaseService implements IContaService {
     }
 
     public void consultaExtrato() {
-        for (Pagamentos Pagamento: this.extrato) {
-            System.out.println("Nome: "+ Pagamento.getNome());
-            System.out.println("Valor: "+ Pagamento.getValor());
-            System.out.println("Operação: "+ Pagamento.getOperacao()+"\n");
+        if (this.saldo == 0){
+            System.out.println("Extrato vazio");
         }
-        System.out.println("Saldo total " + this.saldo);
+        else {
+            for (Pagamentos Pagamento: this.extrato) {
+                System.out.println("Nome: "+ Pagamento.getNome());
+                System.out.println("Valor: "+ Pagamento.getValor());
+                System.out.println("Operação: "+ Pagamento.getOperacao()+"\n");
+            }
+            System.out.println("Saldo total " + this.saldo);
+        }
+
     }
 
     public String getAgencia() {

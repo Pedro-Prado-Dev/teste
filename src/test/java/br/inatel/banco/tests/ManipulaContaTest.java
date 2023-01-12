@@ -40,5 +40,4 @@ public class ManipulaContaTest {
         assertEquals("Falha ao realizar pagamento",resultado);
     }
 
-
 }

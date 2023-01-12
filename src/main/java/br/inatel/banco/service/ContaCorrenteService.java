@@ -29,6 +29,5 @@ public class ContaCorrenteService extends ContaBaseService implements IContaCorr
     @Override
     public void consultaExtrato() {
         super.consultaExtrato();
-        System.out.println("Crédito total: "+ this.credito);
     }
 }
